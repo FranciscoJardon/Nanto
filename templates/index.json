@@ -10,10 +10,6 @@
             "ImgBannerMov": "shopify:\/\/shop_images\/Frame_94.png",
             "UrlBanner": "",
             "TituloBtnBanner": "",
-            "UrlBanner1": "",
-            "TituloBtnBanner1": "asdsad",
-            "UrlBanner2": "",
-            "TituloBtnBanner2": "dsadsa",
             "BtnBackColor": "#000000",
             "BtnTextColor": "#ffffff",
             "Top": 20,
@@ -28,9 +24,43 @@
       ],
       "settings": {
       }
+    },
+    "categorias_nanto_xVzQq4": {
+      "type": "categorias-nanto",
+      "blocks": {
+        "image_FKHh7z": {
+          "type": "image",
+          "settings": {
+            "titulo": "TELA",
+            "productos": [
+
+            ]
+          }
+        },
+        "image_D77xgM": {
+          "type": "image",
+          "settings": {
+            "titulo": "TELA",
+            "productos": [
+              "3-botellas-nanto-madera-250-ml",
+              "3-botellas-nanto-marmol-250-ml",
+              "3-botellas-nanto-telas-250-ml"
+            ]
+          }
+        }
+      },
+      "block_order": [
+        "image_FKHh7z",
+        "image_D77xgM"
+      ],
+      "settings": {
+        "titulo": "¿Qué quieres cuidar?",
+        "quick_add": "none"
+      }
     }
   },
   "order": [
-    "banner_home_3UKUy8"
+    "banner_home_3UKUy8",
+    "categorias_nanto_xVzQq4"
   ]
 }
