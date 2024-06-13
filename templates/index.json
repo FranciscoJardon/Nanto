@@ -57,10 +57,22 @@
         "titulo": "¿Qué quieres cuidar?",
         "quick_add": "none"
       }
+    },
+    "pruebas_fiwHfV": {
+      "type": "pruebas",
+      "settings": {
+        "title": "Featured collection",
+        "collection": "frontpage",
+        "image_ratio": "portrait",
+        "quick_add": "standard",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "banner_home_3UKUy8",
-    "categorias_nanto_xVzQq4"
+    "categorias_nanto_xVzQq4",
+    "pruebas_fiwHfV"
   ]
 }
