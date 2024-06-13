@@ -1,0 +1,69 @@
+
+<div class="contenedor-descripcion">
+    <h2>{{ section.settings.titulo }}</h2>
+
+</div>
+
+<style>
+    .contenedor-descripcion{
+        margin: 0 auto;
+        max-width: 1500px;
+        width: 100%;
+    }
+</style>
+{% schema %}
+    {
+      "name": "descripcion",
+      "class": "descripcion",
+      "settings": [  
+            {
+              "type": "header",
+              "content": "Textos"
+            },
+            {
+              "type": "text",
+              "id": "titulo",
+              "label": "titulo",
+              "default": "¿Qué es NANTO?"
+            },{
+              "type": "text",
+              "id": "descripcion",
+              "label": "descripcion",
+              "default": "Te presentamos Nanto, la innovadora familia de protectores y limpiadores, desarrollada con nanotecnología avanzada para cuidar y prolongar la vida de las superficies de tu hogar."
+            },
+            {
+              "type": "image_picker",
+              "id": "Img",
+              "label": "Imagen"
+            },
+            {
+              "type": "header",
+              "content": "Botón"
+            },
+            {
+              "type": "url",
+              "id": "Url",
+              "label": "Url"
+            },
+            {
+              "type": "text",
+              "id": "TituloBtn",
+              "label": "TituloBtn",
+              "default": "Ver más"
+            },
+            {
+              "type": "color",
+              "id": "BtnBackColor",
+              "label": "Color de Fondo",
+              "default": "#000000"
+            }],
+      "blocks": [
+      ],
+      "presets": [
+        {
+          "name": "descripcion",
+          "blocks": []
+        }
+      ]
+    }
+    {% endschema %}
