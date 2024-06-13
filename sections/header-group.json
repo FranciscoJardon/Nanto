@@ -2,6 +2,15 @@
   "name": "t:sections.header.name",
   "type": "header",
   "sections": {
+    "barra_anuncios_R9Eknt": {
+      "type": "barra-anuncios",
+      "settings": {
+        "text": "Welcome to our store",
+        "colorBackground": "#accbc8",
+        "colorText": "#000000",
+        "link": ""
+      }
+    },
     "header": {
       "type": "header",
       "settings": {
@@ -22,6 +31,7 @@
     }
   },
   "order": [
+    "barra_anuncios_R9Eknt",
     "header"
   ]
 }
