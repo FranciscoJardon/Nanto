@@ -1,0 +1,232 @@
+<div class="contenedor-categorias">
+  <div>
+    <h2>{{ section.settings.titulo }}</h2>
+
+    <div class="ContenedorMiniCard">
+      {% for block in section.blocks %}
+        <div class="ContenedorImgCirculo">
+          <h3>{{ block.settings.titulo }}</h3>
+          <img src="{{ block.settings.Img | img_url: '600x' }}" alt="">
+        </div>
+      {% endfor %}
+    </div>
+
+    <div class="ContenedorList">
+      {% for block in section.blocks %}
+        <div class="ContenedorProductos">
+          {% for product in block.settings.productos %}
+            <div class="quick-add no-js-hidden">
+              {%- liquid
+                assign product_form_id = 'quick-add-' | append: section.id | append: product.id
+                assign qty_rules = false
+                if product.selected_or_first_available_variant.quantity_rule.min > 1 or product.selected_or_first_available_variant.quantity_rule.max != null or product.selected_or_first_available_variant.quantity_rule.increment > 1
+                  assign qty_rules = true
+                endif
+              -%}
+              {%- if product.variants.size > 1 or qty_rules -%}
+                <modal-opener data-modal="#QuickAdd-{{ product.id }}">
+                  <button
+                    id="{{ product_form_id }}-submit"
+                    type="submit"
+                    name="add"
+                    class="quick-add__submit button button--full-width button--secondary{% if horizontal_quick_add %} card--horizontal__quick-add animate-arrow{% endif %}"
+                    aria-haspopup="dialog"
+                    aria-labelledby="{{ product_form_id }}-submit title-{{ section.id }}-{{ product.id }}"
+                    data-product-url="{{ product.url }}"
+                  >
+                    {{ 'products.product.choose_options' | t }}
+                    {%- if horizontal_quick_add -%}
+                      <span class="icon-wrap">{% render 'icon-arrow' %}</span>
+                    {%- endif -%}
+                    {%- render 'loading-spinner' -%}
+                  </button>
+                </modal-opener>
+                <quick-add-modal id="QuickAdd-{{ product.id }}" class="quick-add-modal">
+                  <div
+                    role="dialog"
+                    aria-label="{{ 'products.product.choose_product_options' | t: product_name: product.title | escape }}"
+                    aria-modal="true"
+                    class="quick-add-modal__content global-settings-popup"
+                    tabindex="-1"
+                  >
+                    <button
+                      id="ModalClose-{{ product.id }}"
+                      type="button"
+                      class="quick-add-modal__toggle"
+                      aria-label="{{ 'accessibility.close' | t }}"
+                    >
+                      {% render 'icon-close' %}
+                    </button>
+                    <div id="QuickAddInfo-{{ product.id }}" class="quick-add-modal__content-info"></div>
+                  </div>
+                </quick-add-modal>
+              {%- else -%}
+                <product-form data-section-id="{{ section.id }}">
+                  {%- form 'product',
+                    product,
+                    id: product_form_id,
+                    class: 'form',
+                    novalidate: 'novalidate',
+                    data-type: 'add-to-cart-form'
+                  -%}
+                    <input
+                      type="hidden"
+                      name="id"
+                      value="{{ product.selected_or_first_available_variant.id }}"
+                      class="product-variant-id"
+                      {% if product.selected_or_first_available_variant.available == false %}
+                        disabled
+                      {% endif %}
+                    >
+                    <button
+                      id="{{ product_form_id }}-submit"
+                      type="submit"
+                      name="add"
+                      class="quick-add__submit button button--full-width button--secondary{% if horizontal_quick_add %} card--horizontal__quick-add{% endif %}"
+                      aria-haspopup="dialog"
+                      aria-labelledby="{{ product_form_id }}-submit title-{{ section.id }}-{{ product.id }}"
+                      aria-live="polite"
+                      data-sold-out-message="true"
+                      {% if product.selected_or_first_available_variant.available == false %}
+                        disabled
+                      {% endif %}
+                    >
+                      <span>
+                        {%- if product.selected_or_first_available_variant.available -%}
+                          {{ 'products.product.add_to_cart' | t }}
+                        {%- else -%}
+                          {{ 'products.product.sold_out' | t }}
+                        {%- endif -%}
+                      </span>
+                      <span class="sold-out-message hidden">
+                        {{ 'products.product.sold_out' | t }}
+                      </span>
+                      {%- if horizontal_quick_add -%}
+                        <span class="icon-wrap">{% render 'icon-plus' %}</span>
+                      {%- endif -%}
+                      {%- render 'loading-spinner' -%}
+                    </button>
+                  {%- endform -%}
+                </product-form>
+              {%- endif -%}
+            </div>
+          {% endfor %}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<style>
+  .contenedor-categorias{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 6rem 0rem;
+    gap: 10px;
+    align-items: center;
+    margin-top: 90px;
+    text-align: center;
+    background: #DBE9E4;
+  }
+
+  .ContenedorImgCirculo{
+    background: white;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 1.5rem 1rem;
+    border-radius: 20px;
+  }
+
+  .ContenedorImgCirculo img{
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    object-fit: cover;
+  }
+
+  .ContenedorMiniCard{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 10px;
+  }
+</style>
+
+{% schema %}
+{
+  "name": "categorias-nanto",
+  "class": "categorias-nanto",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Textos"
+    },
+    {
+      "type": "text",
+      "id": "titulo",
+      "label": "Titulo",
+      "default": "¿Qué quieres cuidar?"
+    },
+    {
+      "type": "select",
+      "id": "quick_add",
+      "default": "none",
+      "label": "Modo de adición rápida",
+      "info": "Seleccione el modo de adición rápida de productos",
+      "options": [
+        {
+          "value": "none",
+          "label": "Ninguno"
+        },
+        {
+          "value": "standard",
+          "label": "Estándar"
+        },
+        {
+          "value": "bulk",
+          "label": "A granel"
+        }
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "type": "image",
+      "name": "Protege",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "Img",
+          "label": "Imagen"
+        },
+        {
+          "type": "text",
+          "id": "titulo",
+          "label": "Titulo",
+          "default": "TELA"
+        },
+        {
+          "type": "header",
+          "content": "Productos"
+        },
+        {
+          "type": "product_list",
+          "id": "productos",
+          "label": "Selecciona productos"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "categorias-nanto",
+      "blocks": []
+    }
+  ]
+}
+{% endschema %}

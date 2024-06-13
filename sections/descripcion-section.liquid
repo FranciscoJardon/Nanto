@@ -1,14 +1,46 @@
 
 <div class="contenedor-descripcion">
+ <img src="{{ section.settings.Img | img_url: '2000x' }} " alt="" />  
+ <div class="contenedor-textos">
     <h2>{{ section.settings.titulo }}</h2>
-
+    <p>{{ section.settings.descripcion }}</p>
+    <a class="stylos-btn" href="{{ section.settings.Url }}" style="background:{{ section.settings.BtnBackColor }} ; color:{{ section.settings.ColorText }};">{{ section.settings.TituloBtn }}</a>
 </div>
+</div>
+
+
 
 <style>
     .contenedor-descripcion{
         margin: 0 auto;
         max-width: 1500px;
         width: 100%;
+        display: flex;
+        justify-content: center;
+        background:{{ section.settings.backFondo }};
+        padding:2rem 0rem;
+        gap:40px;
+        align-items:center;
+        border-radius:20px;
+        margin-top:90px;
+    }
+    .contenedor-textos{
+        width: 40%;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;   
+    }
+
+    .stylos-btn{
+        padding: 1rem 4rem ;
+        text-decoration: none;
+        align-self: self-start;
+        transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+    .stylos-btn:hover{
+     transform: scale(1.1);
+     transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
     }
 </style>
 {% schema %}
@@ -49,14 +81,31 @@
               "type": "text",
               "id": "TituloBtn",
               "label": "TituloBtn",
-              "default": "Ver más"
+              "default": "ARMA TU PAQUETE"
             },
             {
               "type": "color",
               "id": "BtnBackColor",
               "label": "Color de Fondo",
               "default": "#000000"
-            }],
+            },
+            {
+              "type": "color",
+              "id": "ColorText",
+              "label": "Color Text",
+              "default": "#ffffff"
+            },
+            {
+              "type": "header",
+              "content": "Color Fondo"
+            },
+            {
+              "type": "color",
+              "id":"backFondo",
+              "label": "Color de Fondo",
+              "default": "#000000"
+            }
+        ],
       "blocks": [
       ],
       "presets": [
