@@ -111,12 +111,22 @@
 
             ]
           }
+        },
+        "image_cnhfdY": {
+          "type": "image",
+          "settings": {
+            "titulo": "TELA",
+            "productos": [
+
+            ]
+          }
         }
       },
       "block_order": [
         "image_FKHh7z",
         "image_D77xgM",
-        "image_TVWQrb"
+        "image_TVWQrb",
+        "image_cnhfdY"
       ],
       "settings": {
         "titulo": "¿Qué quieres cuidar?",
