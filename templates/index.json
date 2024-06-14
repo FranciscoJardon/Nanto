@@ -48,10 +48,28 @@
             "titulo": "ALARGA LA VIDA ÚTIL",
             "descripcion": "Gracias a su acción protectora, Nanto prolonga la vida útil de tus superficies, manteniéndolas en perfecto estado por más tiempo. Dile adiós al desgaste prematuro y disfruta de un hogar siempre reluciente."
           }
+        },
+        "image_9MYpBP": {
+          "type": "image",
+          "settings": {
+            "Img": "shopify:\/\/shop_images\/photorealistic-wooden-house-interior-with-timber-decor-furnishings.jpg",
+            "titulo": "ALARGA LA VIDA ÚTIL",
+            "descripcion": "Gracias a su acción protectora, Nanto prolonga la vida útil de tus superficies, manteniéndolas en perfecto estado por más tiempo. Dile adiós al desgaste prematuro y disfruta de un hogar siempre reluciente."
+          }
+        },
+        "image_NWfAMC": {
+          "type": "image",
+          "settings": {
+            "Img": "shopify:\/\/shop_images\/photorealistic-wooden-house-interior-with-timber-decor-furnishings.jpg",
+            "titulo": "ALARGA LA VIDA ÚTIL",
+            "descripcion": "Gracias a su acción protectora, Nanto prolonga la vida útil de tus superficies, manteniéndolas en perfecto estado por más tiempo. Dile adiós al desgaste prematuro y disfruta de un hogar siempre reluciente."
+          }
         }
       },
       "block_order": [
-        "image_NkrCCM"
+        "image_NkrCCM",
+        "image_9MYpBP",
+        "image_NWfAMC"
       ],
       "settings": {
         "titulo": "Lo mejor para tu hogar",
