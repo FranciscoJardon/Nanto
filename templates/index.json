@@ -83,6 +83,7 @@
         "image_FKHh7z": {
           "type": "image",
           "settings": {
+            "Img": "shopify:\/\/shop_images\/beige-wooden-textured-flooring-background_1.png",
             "titulo": "TELA",
             "productos": [
 
@@ -92,6 +93,7 @@
         "image_D77xgM": {
           "type": "image",
           "settings": {
+            "Img": "shopify:\/\/shop_images\/marble-texture-background-generative-ai.jpg",
             "titulo": "TELA",
             "productos": [
               "3-botellas-nanto-madera-250-ml",
@@ -99,11 +101,22 @@
               "3-botellas-nanto-telas-250-ml"
             ]
           }
+        },
+        "image_TVWQrb": {
+          "type": "image",
+          "settings": {
+            "Img": "shopify:\/\/shop_images\/natural-water-rain-drops-glass-window-abstract-texture-background.jpg",
+            "titulo": "TELA",
+            "productos": [
+
+            ]
+          }
         }
       },
       "block_order": [
         "image_FKHh7z",
-        "image_D77xgM"
+        "image_D77xgM",
+        "image_TVWQrb"
       ],
       "settings": {
         "titulo": "¿Qué quieres cuidar?",
