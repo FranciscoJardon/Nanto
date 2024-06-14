@@ -53,7 +53,7 @@
           "type": "image",
           "settings": {
             "Img": "shopify:\/\/shop_images\/medium-shot-scientist-looking-tube_1.png",
-            "titulo": "Tecnología Avanzada",
+            "titulo": "TECNOLOGÍA AVANZADA",
             "descripcion": "Nuestra avanzada nanotecnología actúa proporcionando una limpieza profunda y una protección duradera. Cada superficie queda impecable y protegida contra el desgaste diario."
           }
         },
@@ -80,6 +80,16 @@
     "categorias_nanto_xVzQq4": {
       "type": "categorias-nanto",
       "blocks": {
+        "image_cnhfdY": {
+          "type": "image",
+          "settings": {
+            "Img": "shopify:\/\/shop_images\/Frame_95.png",
+            "titulo": "TELA",
+            "productos": [
+
+            ]
+          }
+        },
         "image_FKHh7z": {
           "type": "image",
           "settings": {
@@ -111,22 +121,13 @@
 
             ]
           }
-        },
-        "image_cnhfdY": {
-          "type": "image",
-          "settings": {
-            "titulo": "TELA",
-            "productos": [
-
-            ]
-          }
         }
       },
       "block_order": [
+        "image_cnhfdY",
         "image_FKHh7z",
         "image_D77xgM",
-        "image_TVWQrb",
-        "image_cnhfdY"
+        "image_TVWQrb"
       ],
       "settings": {
         "titulo": "¿Qué quieres cuidar?",
