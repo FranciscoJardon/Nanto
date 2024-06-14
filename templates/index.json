@@ -25,6 +25,19 @@
       "settings": {
       }
     },
+    "descripcion_section_VbYAdU": {
+      "type": "descripcion-section",
+      "settings": {
+        "titulo": "¿Qué es NANTO?",
+        "descripcion": "Te presentamos Nanto, la innovadora familia de protectores y limpiadores, desarrollada con nanotecnología avanzada para cuidar y prolongar la vida de las superficies de tu hogar.",
+        "Img": "shopify:\/\/shop_images\/productos_nanto_3.png",
+        "Url": "",
+        "TituloBtn": "ARMA TU PAQUETE",
+        "BtnBackColor": "#dbe9e4",
+        "ColorText": "#ffffff",
+        "backFondo": "#dbe9e4"
+      }
+    },
     "categorias_nanto_xVzQq4": {
       "type": "categorias-nanto",
       "blocks": {
@@ -61,6 +74,7 @@
   },
   "order": [
     "banner_home_3UKUy8",
+    "descripcion_section_VbYAdU",
     "categorias_nanto_xVzQq4"
   ]
 }
