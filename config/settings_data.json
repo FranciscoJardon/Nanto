@@ -1,6 +1,8 @@
 {
   "current": {
-    "logo_width": 90,
+    "logo": "shopify:\/\/shop_images\/Gota_icono_2.png",
+    "logo_width": 50,
+    "favicon": "shopify:\/\/shop_images\/Gota_icono_2_1564cdb3-735e-4fed-a4b9-4d8f46e223a8.png",
     "type_header_font": "poppins_n7",
     "heading_scale": 100,
     "type_body_font": "assistant_n6",
