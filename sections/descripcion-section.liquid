@@ -4,7 +4,7 @@
  <div class="contenedor-textos">
     <h2>{{ section.settings.titulo }}</h2>
     <p>{{ section.settings.descripcion }}</p>
-    <a class="stylos-btn" href="{{ section.settings.Url }}" style="background:{{ section.settings.BtnBackColor }} ; color:{{ section.settings.ColorText }};">{{ section.settings.TituloBtn }}</a>
+    <a class="stylos-btn alingmovil"   href="{{ section.settings.Url }}" style="background:{{ section.settings.BtnBackColor }} ; color:{{ section.settings.ColorText }};">{{ section.settings.TituloBtn }}</a>
 </div>
 </div>
 
@@ -41,6 +41,31 @@
     .stylos-btn:hover{
      transform: scale(1.1);
      transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+
+
+    @media screen and (max-width: 760px) {
+      .contenedor-descripcion{flex-direction: column;
+    padding: 2rem 3rem;
+    }
+      .contenedor-descripcion img{
+        order: 2
+        ;
+        width: 100%;
+        max-width: 500px;
+      }
+      .alingmovil{
+        align-self: center;
+      }
+      .contenedor-textos{ width: 100%;
+      text-align: center;
+      justify-content: center;
+    order: 1;
+    padding: 4rem 1rem;
+    }
+    .descripcion{
+      padding: 0 1rem;
+    }
     }
 </style>
 {% schema %}

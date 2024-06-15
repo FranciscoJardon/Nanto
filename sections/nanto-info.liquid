@@ -1,6 +1,8 @@
+
 <div class="contenedor-informacion-nanto">
+  <h2 class="titulo-porque">¿Por qué Nanto?</h2>
    <img src="  {{ section.settings.Img | img_url: '600x' }}" alt="">
-    <img src="  {{ section.settings.Img2 | img_url: '600x' }}" alt="">
+    <img class="nanto-por" src="  {{ section.settings.Img2 | img_url: '600x' }}" alt="">
 </div>
 
 <style>
@@ -9,10 +11,35 @@
         display: flex;
         justify-content: flex-end;
         margin-top: 90px;
+        gap: 20px;
     }
     .contenedor-informacion-nanto img{
         width: 45%;
         gap: 60px;
+    }
+    .titulo-porque{
+      display: none;
+    }
+
+    @media screen and (max-width: 760px) {
+      .titulo-porque{
+      display: block;
+    }
+
+      .contenedor-informacion-nanto{
+        flex-direction: column;
+   
+    }
+    .contenedor-informacion-nanto img{
+        width: 100%;
+        gap: 60px;
+    }
+    .info-nanto{
+      padding: 0 1rem;
+    }
+    .nanto-por{
+      display: none;
+    }
     }
 </style>
 {% schema %}

@@ -121,6 +121,18 @@
     border: none;
     width: 90%;
   }
+  @media screen and (max-width: 760px) {
+    .contenedor-categorias{
+      flex-direction: column;
+    }
+    .ContenedorMiniCard{
+      grid-template-columns: 1fr 1fr 1fr 1fr; 
+      margin-top: 5rem;
+    }
+    .ContenedorProductos {
+    grid-template-columns: 1fr;
+  }
+  }
 </style>
 <script>
   document.addEventListener('DOMContentLoaded', function() {

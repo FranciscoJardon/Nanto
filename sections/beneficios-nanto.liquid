@@ -101,7 +101,25 @@
         object-fit: cover;
        
     }
-    
+    @media screen and (max-width: 760px) {
+      .lineas{
+     display: none;
+    }
+    .contenedor-titulo, .contenedor-beneficios{
+        justify-content: start;
+        text-align: left;
+        align-items: flex-start;
+   
+        width: 100%;
+    }
+    .contenedor-titulo h2{
+   width:auto;
+    }
+
+    .beneficios{
+      padding: 0  1rem;
+    }
+    }
 </style>
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
