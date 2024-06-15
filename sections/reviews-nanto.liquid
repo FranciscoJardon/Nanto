@@ -1,5 +1,4 @@
-        
-         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 
 <div class="contendor-reviews">
   <div class="contenedor-reviewtext">
@@ -30,19 +29,28 @@
       {% endfor %}
     </div>
     <div class="contenedorbtns">
-            <img class="swiper-button-prev nonefec" style="30px" src="https://cdn.shopify.com/s/files/1/0635/0746/4328/files/btn-rigth.svg?v=1718421054" alt="">
-            <img  class="swiper-button-next" style="30px" src="https://cdn.shopify.com/s/files/1/0635/0746/4328/files/btn-left.svg?v=1718421035" alt="">
-      </div>
+      <img
+        class="swiper-button-prev nonefec"
+        style="30px"
+        src="https://cdn.shopify.com/s/files/1/0635/0746/4328/files/btn-rigth.svg?v=1718421054"
+        alt=""
+      >
+      <img
+        class="swiper-button-next"
+        style="30px"
+        src="https://cdn.shopify.com/s/files/1/0635/0746/4328/files/btn-left.svg?v=1718421035"
+        alt=""
+      >
+    </div>
   </div>
 </div>
 
 <style>
+  .reviews-nanto {
+    background: white;
 
-    .reviews-nanto{
-        background: white;
-
-        margin-top: 90px;
-    }
+    margin-top: 90px;
+  }
   .contendor-reviews {
     display: flex;
     align-items: center;
@@ -71,83 +79,81 @@
     align-items: center;
   }
   .card-review .img-review {
-
     height: 100%;
     object-fit: cover;
   }
-  .contenedor-textos-review{
+  .contenedor-textos-review {
     padding: 0rem 5rem;
   }
-.nonefec{display:none ;}
+  .nonefec {
+    display: none;
+  }
   @media screen and (max-width: 760px) {
-    .nonefec{display:block ;}
-  .reviews-nanto{
-        background: none;
+    .nonefec {
+      display: block;
+    }
+    .reviews-nanto {
+      background: none;
 
-        margin-top: 90px;
+      margin-top: 90px;
     }
     .contendor-reviews {
       flex-direction: column;
       width: 100%;
-      padding: 4rem 1rem ;
-  }
-  .contenedor-reviewtext{
-    width: 100%;
-    max-width: 100%;
-    padding: 4rem 2rem ;
-  }
-  .card-review{
-    display: flex;
-    flex-direction: column;
-    border-radius:20px ;
-    background: white;
-  }
+      padding: 4rem 1rem;
+    }
+    .contenedor-reviewtext {
+      width: 100%;
+      max-width: 100%;
+      padding: 4rem 2rem;
+    }
+    .card-review {
+      display: flex;
+      flex-direction: column;
+      border-radius: 20px;
+      background: white;
+    }
 
-  .img-review{
-    width: 100%;
-height: 350px !important; 
-object-fit: cover !important;
-border-radius:20px 20px 0 0 ;
-}
-.contenedor-textos-review{
-  padding: 4rem 2rem;
-}
-
+    .img-review {
+      width: 100%;
+      height: 350px !important;
+      object-fit: cover !important;
+      border-radius: 20px 20px 0 0;
+    }
+    .contenedor-textos-review {
+      padding: 4rem 2rem;
+    }
   }
-
 </style>
-
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script>
-    var swiper = new Swiper(".SliderReviews", {
-      loop: true,
-      spaceBetween: 10,
-      slidesPerView: 1,
-      freeMode: true,
-      watchSlidesProgress: true,
-      breakpoints: {
-        640: {
-          slidesPerView: 1,
-          spaceBetween: 20,
-        },
-        768: {
-          slidesPerView: 1,
-          spaceBetween: 40,
-        },
-        1524: {
-          slidesPerView: 1,
-          spaceBetween: 40,
-        },
+  var swiper = new Swiper('.SliderReviews', {
+    loop: true,
+    spaceBetween: 10,
+    slidesPerView: 1,
+    freeMode: true,
+    watchSlidesProgress: true,
+    breakpoints: {
+      640: {
+        slidesPerView: 1,
+        spaceBetween: 20,
       },
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
+      768: {
+        slidesPerView: 1,
+        spaceBetween: 40,
       },
-    });
- 
-  </script>
-<style>
+      1524: {
+        slidesPerView: 1,
+        spaceBetween: 40,
+      },
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+</script>
 
 {% schema %}
 {
