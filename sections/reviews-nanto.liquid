@@ -30,7 +30,7 @@
       {% endfor %}
     </div>
     <div class="contenedorbtns">
-            <img class="swiper-button-prev" style="30px" src="https://cdn.shopify.com/s/files/1/0635/0746/4328/files/btn-rigth.svg?v=1718421054" alt="">
+            <img class="swiper-button-prev nonefec" style="30px" src="https://cdn.shopify.com/s/files/1/0635/0746/4328/files/btn-rigth.svg?v=1718421054" alt="">
             <img  class="swiper-button-next" style="30px" src="https://cdn.shopify.com/s/files/1/0635/0746/4328/files/btn-left.svg?v=1718421035" alt="">
       </div>
   </div>
@@ -78,9 +78,9 @@
   .contenedor-textos-review{
     padding: 0rem 5rem;
   }
-
+.nonefec{display:none ;}
   @media screen and (max-width: 760px) {
-
+    .nonefec{display:block ;}
   .reviews-nanto{
         background: none;
 
@@ -128,15 +128,15 @@ border-radius:20px 20px 0 0 ;
       watchSlidesProgress: true,
       breakpoints: {
         640: {
-          slidesPerView: 2,
+          slidesPerView: 1,
           spaceBetween: 20,
         },
         768: {
-          slidesPerView: 3,
+          slidesPerView: 1,
           spaceBetween: 40,
         },
         1524: {
-          slidesPerView: 3,
+          slidesPerView: 1,
           spaceBetween: 40,
         },
       },
