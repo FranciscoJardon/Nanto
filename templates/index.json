@@ -142,6 +142,12 @@
         "Img": "shopify:\/\/shop_images\/Group_557.svg",
         "Img2": "shopify:\/\/shop_images\/que_es.svg"
       }
+    },
+    "prensa_nanto_r3yJXb": {
+      "type": "prensa-nanto",
+      "settings": {
+        "back": "shopify:\/\/shop_images\/1900_1.png"
+      }
     }
   },
   "order": [
@@ -149,6 +155,7 @@
     "descripcion_section_VbYAdU",
     "beneficios_nanto_PJQ6A8",
     "categorias_nanto_xVzQq4",
-    "nanto_info_N3Dhin"
+    "nanto_info_N3Dhin",
+    "prensa_nanto_r3yJXb"
   ]
 }
