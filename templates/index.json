@@ -205,10 +205,21 @@
             "descripcion": "¡Mi sala ya no se ensucia! Está increíble. Definitivamente volvería a comprar porque veo una gran diferencia en el antes y el después. Además, es muy fácil de aplicar siguiendo las instrucciones.",
             "url": ""
           }
+        },
+        "image_DXtTU9": {
+          "type": "image",
+          "settings": {
+            "Img": "shopify:\/\/shop_images\/Rectangle_281.png",
+            "nombre": "Karla PAULINA",
+            "fecha": "24\/05\/2024",
+            "descripcion": "¡Mi sala ya no se ensucia! Está increíble. Definitivamente volvería a comprar porque veo una gran diferencia en el antes y el después. Además, es muy fácil de aplicar siguiendo las instrucciones.",
+            "url": ""
+          }
         }
       },
       "block_order": [
-        "image_ftDj9t"
+        "image_ftDj9t",
+        "image_DXtTU9"
       ],
       "settings": {
         "titulo": "Lo que se dice de Nanto",
