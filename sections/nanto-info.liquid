@@ -1,0 +1,50 @@
+<div class="contenedor-informacion-nanto">
+   <img src="  {{ section.settings.Img | img_url: '600x' }}" alt="">
+    <img src="  {{ section.settings.Img2 | img_url: '600x' }}" alt="">
+</div>
+
+<style>
+    .contenedor-informacion-nanto{
+        flex-direction: row;
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 90px;
+    }
+    .contenedor-informacion-nanto img{
+        width: 45%;
+        gap: 60px;
+    }
+</style>
+{% schema %}
+    {
+      "name": "info-nanto",
+      "class": "info-nanto",
+      "settings": [
+        {
+          "type": "header",
+          "content": "Imagenes"
+        },
+     
+        {
+              "type": "image_picker",
+              "id": "Img",
+              "label": "Tabla"
+            }, {
+              "type": "image_picker",
+              "id": "Img2",
+              "label": "Imagen Nanto"
+            }
+
+      ],
+      "blocks": [
+        
+      ],
+      "presets": [
+        {
+          "name": "info-nanto",
+          "blocks": []
+        }
+      ]
+    }
+    {% endschema %}
+    

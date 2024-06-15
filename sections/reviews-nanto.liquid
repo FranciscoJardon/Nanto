@@ -1,0 +1,168 @@
+<div class="contendor-reviews">
+  <div class="contenedor-reviewtext">
+    <h2>{{ section.settings.titulo }}</h2>
+
+    <p>{{ section.settings.descripcion }}</p>
+
+    <a
+      class="stylos-btn"
+      href="{{ section.settings.Url }}"
+      style="background:{{ section.settings.BtnBackColor }} ; color:{{ section.settings.ColorText }};"
+    >
+      {{- section.settings.TituloBtn -}}
+    </a>
+  </div>
+  <div style="" class="swiper SliderReviews ">
+    <div class="swiper-wrapper">
+      {% for block in section.blocks %}
+        <div class="swiper-slide card-review">
+          <img class="img-review" src="{{ block.settings.Img | img_url: '1000x' }}" alt="">
+          <div class="contenedor-textos-review">
+            <h2 style="">{{ block.settings.nombre }}</h2>
+            <p>{{ block.settings.fecha }}</p>
+            <img src="https://cdn.shopify.com/s/files/1/0635/0746/4328/files/Group_360.svg?v=1718422041" alt="">
+            <p>{{ block.settings.descripcion }}</p>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<style>
+
+    .reviews-nanto{
+        background: white;
+
+        margin-top: 90px;
+    }
+  .contendor-reviews {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+    position: relative;
+    gap: 60px;
+  }
+
+  .contenedor-reviewtext {
+    width: 50%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .SliderReviews {
+    width: 100%;
+  }
+
+  .card-review {
+    display: flex;
+    align-items: center;
+  }
+  .card-review .img-review {
+
+    height: 100%;
+    object-fit: cover;
+  }
+  .contenedor-textos-review{
+    padding: 0rem 5rem;
+  }
+</style>
+
+{% schema %}
+{
+  "name": "reviews-nanto",
+  "class": "reviews-nanto",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Información"
+    },
+    {
+      "type": "text",
+      "id": "titulo",
+      "label": "titulo",
+      "default": "Lo que se dice de Nanto"
+    },
+    {
+      "type": "text",
+      "id": "descripcion",
+      "label": "descripcion",
+      "default": "Descubre los testimonios de clientes que confían en Nanto para el cuidado de las superficies de su hogar."
+    },
+    {
+      "type": "header",
+      "content": "Botón"
+    },
+    {
+      "type": "url",
+      "id": "Url",
+      "label": "Url"
+    },
+    {
+      "type": "text",
+      "id": "TituloBtn",
+      "label": "TituloBtn",
+      "default": "ARMA TU PAQUETE"
+    },
+    {
+      "type": "color",
+      "id": "BtnBackColor",
+      "label": "Color de Fondo",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "ColorText",
+      "label": "Color Text",
+      "default": "#ffffff"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "image",
+      "name": "Reviews",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "Img",
+          "label": "Imagen"
+        },
+        {
+          "type": "text",
+          "id": "nombre",
+          "label": "titulo",
+          "default": "Karla PAULINA"
+        },
+        {
+          "type": "text",
+          "id": "fecha",
+          "label": "fecha",
+          "default": "24/05/2024"
+        },
+        {
+          "type": "text",
+          "id": "descripcion",
+          "label": "descripcion",
+          "default": "¡Mi sala ya no se ensucia! Está increíble. Definitivamente volvería a comprar porque veo una gran diferencia en el antes y el después. Además, es muy fácil de aplicar siguiendo las instrucciones."
+        },
+        {
+          "type": "url",
+          "id": "url",
+          "label": "Url"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "reviews-nanto",
+      "blocks": []
+    }
+  ]
+}
+{% endschema %}

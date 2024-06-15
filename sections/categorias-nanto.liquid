@@ -1,83 +1,59 @@
-
-  <script src="{{ 'quick-add.js' | asset_url }}" defer="defer"></script>
-
+<script src="{{ 'quick-add.js' | asset_url }}" defer="defer"></script>
 <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
 <div class="contenedor-categorias">
   <div>
     <h2>{{ section.settings.titulo }}</h2>
-
     <div class="ContenedorMiniCard">
       {% for block in section.blocks %}
-        <div class="ContenedorImgCirculo">
+        <div class="ContenedorImgCirculo{% if forloop.first %} ContenedorActivado{% endif %}" data-target="product-container-{{ forloop.index }}">
           <h3>{{ block.settings.titulo }}</h3>
           <img src="{{ block.settings.Img | img_url: '600x' }}" alt="">
         </div>
       {% endfor %}
     </div>
   </div>
-    <div class="ContenedorList">
-      {% for block in section.blocks %}
-        <div class="ContenedorProductos">
-          {% for product in block.settings.productos %}
-
-
+  <div class="ContenedorList">
+    {% for block in section.blocks %}
+      <div class="ContenedorProductos" id="product-container-{{ forloop.index }}" style="{% if forloop.first %}display: grid;{% else %}display: none;{% endif %}">
+        {% for product in block.settings.productos %}
+          <div class="CardProducto">
+            <img src="{{ product.featured_image | img_url: '1000x' }}" alt="{{ product.title }}">
+            <div class="Lineas">.</div>
+            <h2>{{ product.title }}</h2>
+            <h4>{{ product.title }}</h4>
             <div class="quick-add no-js-hidden">
               <product-form data-section-id="{{ section.id }}">
-                {%- form 'product',
-                  product,
-                  id: product_form_id,
-                  class: 'form',
-                  novalidate: 'novalidate',
-                  data-type: 'add-to-cart-form'
-                -%}
-                  <input
-                    type="hidden"
-                    name="id"
-                    value="{{ product.selected_or_first_available_variant.id }}"
-                    class="product-variant-id"
-                    {% if product.selected_or_first_available_variant.available == false %}
-                      disabled
-                    {% endif %}
-                  >
-                  <button
-                    id="{{ product_form_id }}-submit"
-                    type="submit"
-                    name="add"
-                    class="buttonAddCart"
-                    aria-haspopup="dialog"
-                    aria-labelledby="{{ product_form_id }}-submit title-{{ section.id }}-{{ product.id }}"
-                    aria-live="polite"
-                    data-sold-out-message="true"
-                    {% if product.selected_or_first_available_variant.available == false %}
-                      disabled
-                    {% endif %}
-                  >
+                {%- form 'product', product, id: product_form_id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
+                  <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}" class="product-variant-id" {% if product.selected_or_first_available_variant.available == false %} disabled {% endif %}>
+                  <button id="{{ product_form_id }}-submit" type="submit" name="add" class="buttonAddCart" aria-haspopup="dialog" aria-labelledby="{{ product_form_id }}-submit title-{{ section.id }}-{{ product.id }}" aria-live="polite" data-sold-out-message="true" {% if product.selected_or_first_available_variant.available == false %} disabled {% endif %}>
                     AGREGAR AL CARRITO
                     {%- render 'loading-spinner' -%}
                   </button>
                 {%- endform -%}
               </product-form>
             </div>
-          {% endfor %}
-        </div>
-      {% endfor %}
-    </div>
+          </div>
+        {% endfor %}
+      </div>
+    {% endfor %}
+  </div>
 </div>
 
 <style>
-  .contenedor-categorias{
+  .contenedor-categorias {
     width: 100%;
     display: flex;
     justify-content: center;
     padding: 6rem 0rem;
-    gap: 10px;
+    gap: 60px;
     align-items: center;
     margin-top: 90px;
     text-align: center;
     background: #DBE9E4;
+    margin: 0 auto;
+    margin-top: 90px;
   }
-
-  .ContenedorImgCirculo{
+  .ContenedorImgCirculo {
     background: white;
     display: flex;
     justify-content: center;
@@ -86,36 +62,100 @@
     gap: 10px;
     padding: 1.5rem 1rem;
     border-radius: 20px;
+    border: 1.5px solid rgba(0, 0, 0, 0);
+    cursor: pointer;
   }
-
-  .ContenedorImgCirculo img{
+  .ContenedorActivado {
+    border: 1.5px solid rgb(0, 0, 0);
+  }
+  .ContenedorImgCirculo img {
     width: 100px;
     height: 100px;
     border-radius: 100%;
     object-fit: cover;
   }
-
-  .ContenedorMiniCard{
+  .ContenedorMiniCard {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 10px;
-    margin-top: 10px;
+    margin-top: 16px;
   }
-
-  .ContenedorProductos{
+  .ContenedorList {
+    width: 60%;
+    max-width: 700px;
+  }
+  .ContenedorProductos {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: 20px;
   }
-  .buttonAddCart{
+  .CardProducto {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    padding-bottom: 3rem;
+    border-radius: 20px;
+    gap: 10px;
+  }
+  .CardProducto img {
+    border-radius: 20px;
+    width: 100%;
+  }
+  .CardProducto h2, .CardProducto h4 {
+    text-align: left;
+    margin-left: 5%;
+  }
+  .Lineas {
+    width: 90%;
+    height: 1.5px;
+    background: #ABABAB;
+    align-self: center;
+    color: #fff;
+  }
+  .buttonAddCart {
     padding: 1rem 6rem;
     font-size: 16px;
     color: white;
     font-weight: 600;
     background: #889CBB;
     border: none;
+    width: 90%;
   }
 </style>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+  const buttons = document.querySelectorAll('.ContenedorImgCirculo');
+  const productContainers = document.querySelectorAll('.ContenedorProductos');
 
+  function activateButton(button) {
+    buttons.forEach(btn => btn.classList.remove('ContenedorActivado'));
+    button.classList.add('ContenedorActivado');
+  }
+
+  buttons.forEach(button => {
+    button.addEventListener('click', function() {
+      // Ocultar todos los contenedores de productos
+      productContainers.forEach(container => {
+        container.style.display = 'none';
+      });
+
+      // Mostrar el contenedor de productos correspondiente
+      const target = this.getAttribute('data-target');
+      document.getElementById(target).style.display = 'grid';
+
+      // Activar el botón actual
+      activateButton(this);
+    });
+  });
+
+  // Activar el primer contenedor y botón al cargar la página
+  if (buttons.length > 0) {
+    activateButton(buttons[0]);
+    productContainers[0].style.display = 'grid';
+  }
+});
+
+</script>
 {% schema %}
 {
   "name": "categorias-nanto",
