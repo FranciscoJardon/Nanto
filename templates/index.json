@@ -135,12 +135,20 @@
         "titulo": "¿Qué quieres cuidar?",
         "quick_add": "none"
       }
+    },
+    "nanto_info_N3Dhin": {
+      "type": "nanto-info",
+      "settings": {
+        "Img": "shopify:\/\/shop_images\/Group_557.svg",
+        "Img2": "shopify:\/\/shop_images\/que_es.svg"
+      }
     }
   },
   "order": [
     "banner_home_3UKUy8",
     "descripcion_section_VbYAdU",
     "beneficios_nanto_PJQ6A8",
-    "categorias_nanto_xVzQq4"
+    "categorias_nanto_xVzQq4",
+    "nanto_info_N3Dhin"
   ]
 }
