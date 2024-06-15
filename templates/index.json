@@ -145,6 +145,50 @@
     },
     "prensa_nanto_r3yJXb": {
       "type": "prensa-nanto",
+      "blocks": {
+        "image_cw49ac": {
+          "type": "image",
+          "settings": {
+            "Img": "shopify:\/\/shop_images\/Frame_101.png",
+            "titulo": "La opinión de los medios",
+            "descripcion": "“El desarrollo de proyectos en este ámbito representa un área de oportunidad para las regiones del país donde existe un avance en la industria de tecnología”.",
+            "url": ""
+          }
+        },
+        "image_7MqBq9": {
+          "type": "image",
+          "settings": {
+            "Img": "shopify:\/\/shop_images\/Frame_99.png",
+            "titulo": "La opinión de los medios",
+            "descripcion": "“El desarrollo de proyectos en este ámbito representa un área de oportunidad para las regiones del país donde existe un avance en la industria de tecnología”.",
+            "url": ""
+          }
+        },
+        "image_mqdBXH": {
+          "type": "image",
+          "settings": {
+            "Img": "shopify:\/\/shop_images\/Frame_98.png",
+            "titulo": "La opinión de los medios",
+            "descripcion": "“El desarrollo de proyectos en este ámbito representa un área de oportunidad para las regiones del país donde existe un avance en la industria de tecnología”.",
+            "url": ""
+          }
+        },
+        "image_NP43We": {
+          "type": "image",
+          "settings": {
+            "Img": "shopify:\/\/shop_images\/Frame_100.png",
+            "titulo": "La opinión de los medios",
+            "descripcion": "“El desarrollo de proyectos en este ámbito representa un área de oportunidad para las regiones del país donde existe un avance en la industria de tecnología”.",
+            "url": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_cw49ac",
+        "image_7MqBq9",
+        "image_mqdBXH",
+        "image_NP43We"
+      ],
       "settings": {
         "back": "shopify:\/\/shop_images\/1900_1.png"
       }
