@@ -193,10 +193,10 @@
         "back": "shopify:\/\/shop_images\/1900_1.png"
       }
     },
-    "reviews_nanto_mW7cQh": {
+    "reviews_nanto_6GrXiF": {
       "type": "reviews-nanto",
       "blocks": {
-        "image_UjVBrj": {
+        "image_rBc8QV": {
           "type": "image",
           "settings": {
             "Img": "shopify:\/\/shop_images\/Rectangle_281.png",
@@ -205,21 +205,10 @@
             "descripcion": "¡Mi sala ya no se ensucia! Está increíble. Definitivamente volvería a comprar porque veo una gran diferencia en el antes y el después. Además, es muy fácil de aplicar siguiendo las instrucciones.",
             "url": ""
           }
-        },
-        "image_TxTwRT": {
-          "type": "image",
-          "settings": {
-            "Img": "shopify:\/\/shop_images\/person-stands-on-rocks-poking-out-of-the-ocean-shoreline.jpg",
-            "nombre": "Karla PAULINA",
-            "fecha": "24\/05\/2024",
-            "descripcion": "¡Mi sala ya no se ensucia! Está increíble. Definitivamente volvería a comprar porque veo una gran diferencia en el antes y el después. Además, es muy fácil de aplicar siguiendo las instrucciones.",
-            "url": ""
-          }
         }
       },
       "block_order": [
-        "image_UjVBrj",
-        "image_TxTwRT"
+        "image_rBc8QV"
       ],
       "settings": {
         "titulo": "Lo que se dice de Nanto",
@@ -238,6 +227,6 @@
     "categorias_nanto_xVzQq4",
     "nanto_info_N3Dhin",
     "prensa_nanto_r3yJXb",
-    "reviews_nanto_mW7cQh"
+    "reviews_nanto_6GrXiF"
   ]
 }
