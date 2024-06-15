@@ -18,11 +18,18 @@
             "heading": "Quick links",
             "menu": "footer"
           }
+        },
+        "brand_information_pMGbfm": {
+          "type": "brand_information",
+          "settings": {
+            "show_social": true
+          }
         }
       },
       "block_order": [
         "link_list_PtkKmA",
-        "link_list_BazaDp"
+        "link_list_BazaDp",
+        "brand_information_pMGbfm"
       ],
       "settings": {
         "color_scheme": "scheme-1",
