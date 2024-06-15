@@ -225,8 +225,8 @@
         "titulo": "Lo que se dice de Nanto",
         "descripcion": "Descubre los testimonios de clientes que confían en Nanto para el cuidado de las superficies de su hogar.",
         "Url": "",
-        "TituloBtn": "ARMA TU PAQUETE",
-        "BtnBackColor": "#000000",
+        "TituloBtn": "VER TESTIMONIOS",
+        "BtnBackColor": "#b27362",
         "ColorText": "#ffffff"
       }
     }
