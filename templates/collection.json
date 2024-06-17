@@ -1,1 +1,61 @@
-{"sections":{"banner":{"type":"main-collection-banner","settings":{"show_collection_description":true,"show_collection_image":false,"color_scheme":"scheme-1"}},"product-grid":{"type":"main-collection-product-grid","settings":{"products_per_page":16,"columns_desktop":4,"color_scheme":"scheme-1","image_ratio":"adapt","image_shape":"default","show_secondary_image":false,"show_vendor":false,"show_rating":false,"quick_add":"none","enable_filtering":true,"filter_type":"horizontal","enable_sorting":true,"columns_mobile":"2","padding_top":36,"padding_bottom":36}}},"order":["banner","product-grid"]}
+{
+  "sections": {
+    "banner_home_gXzmHT": {
+      "type": "banner-home",
+      "blocks": {
+        "image_g6bdCa": {
+          "type": "image",
+          "settings": {
+            "ImgBannerDesk": "shopify:\/\/shop_images\/Group_559.png",
+            "UrlBanner": "",
+            "TituloBtnBanner": "",
+            "BtnBackColor": "#000000",
+            "BtnTextColor": "#ffffff",
+            "Top": 20,
+            "Left": 10,
+            "TopTel": 20,
+            "LeftTel": 10
+          }
+        }
+      },
+      "block_order": [
+        "image_g6bdCa"
+      ],
+      "settings": {
+      }
+    },
+    "banner": {
+      "type": "main-collection-banner",
+      "settings": {
+        "show_collection_description": true,
+        "show_collection_image": false,
+        "color_scheme": "scheme-1"
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "settings": {
+        "products_per_page": 16,
+        "columns_desktop": 4,
+        "color_scheme": "scheme-1",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "enable_filtering": true,
+        "filter_type": "horizontal",
+        "enable_sorting": true,
+        "columns_mobile": "2",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "banner_home_gXzmHT",
+    "banner",
+    "product-grid"
+  ]
+}
